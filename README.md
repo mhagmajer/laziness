@@ -28,13 +28,13 @@ Laziness.from(range(0, 10))
 
 ### Table of Contents
 
--   [Laziness wrapper](#laziness-wrapper)
+-   [LAZINESS WRAPPER](#laziness-wrapper)
 -   [Laziness](#laziness)
     -   [toArray](#toarray)
 -   [UTILITIES](#utilities)
 -   [range](#range)
 
-## Laziness wrapper
+## LAZINESS WRAPPER
 
 Handy wrapper for common operations on iterables.
 
