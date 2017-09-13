@@ -3,6 +3,8 @@
 /**
  */
 class Laziness<T> {
+  /**
+   */
   static from(iter: Iterable<T>) {
     return new Laziness(iter);
   }

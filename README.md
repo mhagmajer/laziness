@@ -32,6 +32,7 @@ Laziness.from(range(0, 10))
 -   [LAZINESS WRAPPER](#laziness-wrapper)
 -   [Laziness](#laziness)
     -   [toArray](#toarray)
+    -   [from](#from)
 -   [UTILITIES](#utilities)
 -   [range](#range)
 
@@ -49,6 +50,12 @@ Handy wrapper for common operations on iterables.
 ### toArray
 
 Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;T>** 
+
+### from
+
+**Parameters**
+
+-   `iter` **Iterable&lt;T>** 
 
 ## UTILITIES
 
