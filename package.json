@@ -8,10 +8,15 @@
   "author": "Marcin Hagmajer",
   "main": "src/index.js",
   "keywords": [
+    "evaluation",
+    "flow",
+    "generator",
     "generators",
-    "iterators",
     "iterable",
-    "lazy"
+    "iterator",
+    "iterators",
+    "lazy",
+    "stream"
   ],
   "scripts": {
     "flow": "flow",
