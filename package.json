@@ -1,6 +1,6 @@
 {
   "name": "laziness",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Lazy evaluation utilities for JavaScript powered by ES6 iterators and generators",
   "repository": "mhagmajer/laziness",
   "bugs": "https://github.com/mhagmajer/laziness/issues",

@@ -1,5 +1,6 @@
 /* @flow */
 
+const forEach = require('./for-each');
 const slice = require('./slice');
 
 /**
@@ -16,6 +17,13 @@ class Laziness<T> {
   }
 
   _iter: Iterable<T>;
+
+  /**
+   * {@link forEach}
+   */
+  forEach(callback: (T) => void) {
+    forEach(this._iter, callback);
+  }
 
   /**
    * {@link slice}

@@ -1,8 +1,7 @@
 /* @flow */
 
 /**
- * Analogical to
- * {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice}
+ * Analogical to [Array.prototype.slice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
  */
 function* slice<T>(iter: Iterable<T>, begin: number, end?: number): Generator<T, void, void> {
   let i = 0;

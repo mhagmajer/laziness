@@ -4,6 +4,7 @@ toc:
   - range
   - name: UTILITIES
     description: Basic functions
+  - forEach
   - slice
   - name: LAZINESS WRAPPER
     description: Handy wrapper for common operations on iterables.

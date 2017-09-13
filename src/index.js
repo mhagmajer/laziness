@@ -1,5 +1,6 @@
 /* @flow */
 
+module.exports.forEach = require('./for-each');
 module.exports.range = require('./range');
 module.exports.slice = require('./slice');
 

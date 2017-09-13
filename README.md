@@ -22,7 +22,6 @@ for (const x of range(0, 10)) {
 
 // the same
 Laziness.from(range(0, 10))
-  .toArray()
   .forEach(x => console.log(x));
 ```
 
@@ -35,9 +34,11 @@ Laziness.from(range(0, 10))
 -   [INFINITE ITERATORS](#infinite-iterators)
 -   [range](#range)
 -   [UTILITIES](#utilities)
+-   [forEach](#foreach)
 -   [slice](#slice)
 -   [LAZINESS WRAPPER](#laziness-wrapper)
 -   [Laziness](#laziness)
+    -   [forEach](#foreach-1)
     -   [slice](#slice-1)
     -   [toArray](#toarray)
     -   [from](#from)
@@ -55,6 +56,12 @@ Infinite Iterators
 -   `to` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 -   `step` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)**  (optional, default `1`)
 
+**Examples**
+
+```javascript
+range(0, Infinity) // 0, 1, 2, ...
+```
+
 Returns **Generator&lt;[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number), void, void>** 
 
 ## UTILITIES
@@ -62,10 +69,20 @@ Returns **Generator&lt;[number](https://developer.mozilla.org/en-US/docs/Web/Jav
 Basic functions
 
 
+## forEach
+
+Analogical to [Array.prototype.forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+
+**Parameters**
+
+-   `iter` **Iterable&lt;T>** 
+-   `callback` **function (T): void** 
+
+Returns **void** 
+
 ## slice
 
-Analogical to
-<https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice>
+Analogical to [Array.prototype.slice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
 
 **Parameters**
 
@@ -85,6 +102,14 @@ Handy wrapper for common operations on iterables.
 **Parameters**
 
 -   `iter` **Iterable&lt;T>** 
+
+### forEach
+
+[forEach](#foreach)
+
+**Parameters**
+
+-   `callback` **function (T): void** 
 
 ### slice
 
