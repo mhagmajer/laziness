@@ -1,0 +1,6 @@
+toc:
+  - name: Laziness wrapper
+    description: Handy wrapper for common operations on iterables.
+  - Laziness
+  - name: UTILITIES
+    description: Basic functions.

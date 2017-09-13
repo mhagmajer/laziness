@@ -1,0 +1,30 @@
+/* eslint-disable no-console */
+
+const { Transform } = require('stream');
+const del = require('del');
+const flowRemoveTypes = require('flow-remove-types');
+const gulp = require('gulp');
+const mirror = require('gulp-mirror');
+const rename = require('gulp-rename');
+
+gulp.task('clean', () => del([
+  'lib/',
+]));
+
+gulp.task('flow-remove-types', ['clean'], () =>
+  gulp.src(['src/**/*.js', '!src/**/*.test.js'])
+    .pipe(mirror(
+      rename({ extname: '.js.flow' }),
+      new Transform({
+        objectMode: true,
+        transform: (file, enc, cb) => {
+          // eslint-disable-next-line no-param-reassign
+          file.contents = new Buffer(flowRemoveTypes(file.contents.toString()).toString());
+          cb(null, file);
+        },
+      })
+    ))
+    .pipe(gulp.dest('lib/'))
+);
+
+gulp.task('default', ['flow-remove-types']);
