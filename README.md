@@ -1,6 +1,7 @@
 # laziness
 
 Lazy evaluation utilities for JavaScript powered by ES6 iterators and generators.
+Includes Flow type definitions.
 
 ## Installation
 
@@ -40,6 +41,10 @@ Handy wrapper for common operations on iterables.
 
 
 ## Laziness
+
+**Parameters**
+
+-   `iter` **Iterable&lt;T>** 
 
 ### toArray
 

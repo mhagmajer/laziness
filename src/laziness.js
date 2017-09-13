@@ -3,7 +3,11 @@
 /**
  */
 class Laziness<T> {
-  contructor(iter: Iterable<T>) {
+  static from(iter: Iterable<T>) {
+    return new Laziness(iter);
+  }
+
+  constructor(iter: Iterable<T>) {
     this._iter = iter;
   }
 
