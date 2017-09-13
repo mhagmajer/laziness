@@ -1,5 +1,7 @@
 /* @flow */
 
+const slice = require('./slice');
+
 /**
  */
 class Laziness<T> {
@@ -14,6 +16,13 @@ class Laziness<T> {
   }
 
   _iter: Iterable<T>;
+
+  /**
+   * {@link slice}
+   */
+  slice(begin: number, end?: number): Laziness<T> {
+    return new Laziness(slice(this._iter, begin, end));
+  }
 
   /**
    */

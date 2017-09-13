@@ -1,7 +1,10 @@
 # laziness
 
 Lazy evaluation utilities for JavaScript powered by ES6 iterators and generators.
-Includes Flow type definitions.
+
+Well-tested and with flow type definitions included.
+
+Compatible with Node v6.11.2 LTS or later.
 
 ## Installation
 
@@ -29,12 +32,48 @@ Laziness.from(range(0, 10))
 
 ### Table of Contents
 
+-   [INFINITE ITERATORS](#infinite-iterators)
+-   [range](#range)
+-   [UTILITIES](#utilities)
+-   [slice](#slice)
 -   [LAZINESS WRAPPER](#laziness-wrapper)
 -   [Laziness](#laziness)
+    -   [slice](#slice-1)
     -   [toArray](#toarray)
     -   [from](#from)
--   [UTILITIES](#utilities)
--   [range](#range)
+
+## INFINITE ITERATORS
+
+Infinite Iterators
+
+
+## range
+
+**Parameters**
+
+-   `from` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+-   `to` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+-   `step` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)**  (optional, default `1`)
+
+Returns **Generator&lt;[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number), void, void>** 
+
+## UTILITIES
+
+Basic functions
+
+
+## slice
+
+Analogical to
+<https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice>
+
+**Parameters**
+
+-   `iter` **Iterable&lt;T>** 
+-   `begin` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+-   `end` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+
+Returns **Generator&lt;T, void, void>** 
 
 ## LAZINESS WRAPPER
 
@@ -47,6 +86,17 @@ Handy wrapper for common operations on iterables.
 
 -   `iter` **Iterable&lt;T>** 
 
+### slice
+
+[slice](#slice)
+
+**Parameters**
+
+-   `begin` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+-   `end` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+
+Returns **[Laziness](#laziness)&lt;T>** 
+
 ### toArray
 
 Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;T>** 
@@ -56,18 +106,3 @@ Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refere
 **Parameters**
 
 -   `iter` **Iterable&lt;T>** 
-
-## UTILITIES
-
-Basic functions.
-
-
-## range
-
-**Parameters**
-
--   `from` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
--   `to` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
--   `step` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)**  (optional, default `1`)
-
-Returns **Generator&lt;[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number), void, void>** 

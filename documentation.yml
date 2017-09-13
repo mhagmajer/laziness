@@ -1,6 +1,10 @@
 toc:
+  - name: INFINITE ITERATORS
+    description: Infinite Iterators
+  - range
+  - name: UTILITIES
+    description: Basic functions
+  - slice
   - name: LAZINESS WRAPPER
     description: Handy wrapper for common operations on iterables.
   - Laziness
-  - name: UTILITIES
-    description: Basic functions.
