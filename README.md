@@ -2,7 +2,7 @@
 
 Lazy evaluation utilities for JavaScript powered by ES6 iterators and generators.
 
-Well-tested and with flow type definitions included.
+Well-tested and with [Flow](https://flow.org/) type definitions included.
 
 Compatible with Node v6.11.2 LTS or later.
 
@@ -35,10 +35,12 @@ Laziness.from(range(0, 10))
 -   [range](#range)
 -   [UTILITIES](#utilities)
 -   [forEach](#foreach)
+-   [map](#map)
 -   [slice](#slice)
 -   [LAZINESS WRAPPER](#laziness-wrapper)
 -   [Laziness](#laziness)
     -   [forEach](#foreach-1)
+    -   [map](#map-1)
     -   [slice](#slice-1)
     -   [toArray](#toarray)
     -   [from](#from)
@@ -80,6 +82,17 @@ Analogical to [Array.prototype.forEach](https://developer.mozilla.org/en-US/docs
 
 Returns **void** 
 
+## map
+
+Analogical to [Array.prototype.map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
+
+**Parameters**
+
+-   `iter` **Iterable&lt;T>** 
+-   `callback` **function (T): U** 
+
+Returns **Generator&lt;U, void, void>** 
+
 ## slice
 
 Analogical to [Array.prototype.slice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
@@ -110,6 +123,16 @@ Handy wrapper for common operations on iterables.
 **Parameters**
 
 -   `callback` **function (T): void** 
+
+### map
+
+[map](#map)
+
+**Parameters**
+
+-   `callback` **function (T): U** 
+
+Returns **[Laziness](#laziness)&lt;U>** 
 
 ### slice
 

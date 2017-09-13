@@ -1,6 +1,7 @@
 /* @flow */
 
 const forEach = require('./for-each');
+const map = require('./map');
 const slice = require('./slice');
 
 /**
@@ -23,6 +24,13 @@ class Laziness<T> {
    */
   forEach(callback: (T) => void) {
     forEach(this._iter, callback);
+  }
+
+  /**
+   * {@link map}
+   */
+  map<U>(callback: (T) => U): Laziness<U> {
+    return new Laziness(map(this._iter, callback));
   }
 
   /**
