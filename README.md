@@ -32,6 +32,7 @@ Laziness.from(range(0, 10))
 ### Table of Contents
 
 -   [INFINITE ITERATORS](#infinite-iterators)
+-   [cycle](#cycle)
 -   [range](#range)
 -   [UTILITIES](#utilities)
 -   [forEach](#foreach)
@@ -49,6 +50,23 @@ Laziness.from(range(0, 10))
 
 Infinite Iterators
 
+
+## cycle
+
+Generates all elements of the iterable. Once the original iterable is exhausted, yields all
+elements again. Repeats indefinitely.
+
+**Parameters**
+
+-   `iter` **Iterable&lt;T>** 
+
+**Examples**
+
+```javascript
+cycle('ABC') // 'A', 'B', 'C', 'A', 'B', 'C', ...
+```
+
+Returns **Generator&lt;T, void, void>** 
 
 ## range
 

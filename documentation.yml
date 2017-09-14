@@ -1,6 +1,7 @@
 toc:
   - name: INFINITE ITERATORS
     description: Infinite Iterators
+  - cycle
   - range
   - name: UTILITIES
     description: Basic functions
