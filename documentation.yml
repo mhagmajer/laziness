@@ -6,6 +6,7 @@ toc:
   - repeat
   - name: UTILITIES
     description: Basic functions
+  - filter
   - forEach
   - map
   - slice

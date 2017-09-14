@@ -36,11 +36,13 @@ Laziness.from(range(0, 10))
 -   [range](#range)
 -   [repeat](#repeat)
 -   [UTILITIES](#utilities)
+-   [filter](#filter)
 -   [forEach](#foreach)
 -   [map](#map)
 -   [slice](#slice)
 -   [LAZINESS WRAPPER](#laziness-wrapper)
 -   [Laziness](#laziness)
+    -   [filter](#filter-1)
     -   [forEach](#foreach-1)
     -   [map](#map-1)
     -   [slice](#slice-1)
@@ -111,6 +113,17 @@ Returns **Generator&lt;T, void, void>**
 Basic functions
 
 
+## filter
+
+Analogical to [Array.prototype.filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
+
+**Parameters**
+
+-   `iter` **Iterable&lt;T>** 
+-   `callback` **function (T): [boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
+
+Returns **Generator&lt;T, void, void>** 
+
 ## forEach
 
 Analogical to [Array.prototype.forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
@@ -155,6 +168,16 @@ Handy wrapper for common operations on iterables.
 **Parameters**
 
 -   `iter` **Iterable&lt;T>** 
+
+### filter
+
+[filter](#filter)
+
+**Parameters**
+
+-   `callback` **function (T): [boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
+
+Returns **[Laziness](#laziness)&lt;T>** 
 
 ### forEach
 
