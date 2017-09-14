@@ -34,6 +34,7 @@ Laziness.from(range(0, 10))
 -   [INFINITE ITERATORS](#infinite-iterators)
 -   [cycle](#cycle)
 -   [range](#range)
+-   [repeat](#repeat)
 -   [UTILITIES](#utilities)
 -   [forEach](#foreach)
 -   [map](#map)
@@ -83,6 +84,27 @@ range(0, Infinity) // 0, 1, 2, ...
 ```
 
 Returns **Generator&lt;[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number), void, void>** 
+
+## repeat
+
+Repeats value endlessly or up to limit times.
+
+**Parameters**
+
+-   `value` **T** 
+-   `limit` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)**  (optional, default `Infinity`)
+
+**Examples**
+
+```javascript
+repeat(5) // 5, 5, 5, 5, ...
+```
+
+```javascript
+repeat(10, 3) // 10, 10, 10
+```
+
+Returns **Generator&lt;T, void, void>** 
 
 ## UTILITIES
 

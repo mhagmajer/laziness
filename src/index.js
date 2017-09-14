@@ -2,6 +2,7 @@
 
 module.exports.cycle = require('./cycle');
 module.exports.range = require('./range');
+module.exports.repeat = require('./repeat');
 
 module.exports.forEach = require('./for-each');
 module.exports.map = require('./map');

@@ -3,6 +3,7 @@ toc:
     description: Infinite Iterators
   - cycle
   - range
+  - repeat
   - name: UTILITIES
     description: Basic functions
   - forEach
