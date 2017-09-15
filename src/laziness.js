@@ -8,7 +8,7 @@ const slice = require('./slice');
 /**
  * Convenient wrapper for chaining calls to library functions.
  *
- * You can also use it as iterator
+ * You can also use it as iterable
  * @example
  * Array.from(new Laziness([1, 2, 3])) // 1, 2, 3
  */
