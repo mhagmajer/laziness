@@ -165,13 +165,23 @@ Handy wrapper for common operations on iterables.
 
 ## Laziness
 
+Convenient wrapper for chaining calls to library functions.
+
+You can also use it as iterator
+
 **Parameters**
 
 -   `iter` **Iterable&lt;T>** 
 
+**Examples**
+
+```javascript
+Array.from(new Laziness([1, 2, 3])) // 1, 2, 3
+```
+
 ### filter
 
-[filter](#filter)
+See [filter](#filter)
 
 **Parameters**
 
@@ -181,7 +191,7 @@ Returns **[Laziness](#laziness)&lt;T>**
 
 ### forEach
 
-[forEach](#foreach)
+See [forEach](#foreach)
 
 **Parameters**
 
@@ -189,7 +199,7 @@ Returns **[Laziness](#laziness)&lt;T>**
 
 ### map
 
-[map](#map)
+See [map](#map)
 
 **Parameters**
 
@@ -199,7 +209,7 @@ Returns **[Laziness](#laziness)&lt;U>**
 
 ### slice
 
-[slice](#slice)
+See [slice](#slice)
 
 **Parameters**
 
