@@ -11,5 +11,6 @@ globals:
   expect: false
   Generator: false
   Iterable: false
+  Iterator: false
   jest: false
   test: false

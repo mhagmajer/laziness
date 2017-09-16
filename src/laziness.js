@@ -4,6 +4,7 @@ const filter = require('./filter');
 const forEach = require('./for-each');
 const map = require('./map');
 const slice = require('./slice');
+const tee = require('./tee');
 
 /**
  * Convenient wrapper for chaining calls to library functions.
@@ -51,6 +52,13 @@ class Laziness<T> implements Iterable<T> {
    */
   slice(begin: number, end?: number): Laziness<T> {
     return new Laziness(slice(this._iter, begin, end));
+  }
+
+  /**
+   * See {@link tee}
+   */
+  tee(n: number = 2): Array<Generator<T, void, void>> {
+    return tee(this._iter, n);
   }
 
   /**
