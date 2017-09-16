@@ -57,8 +57,8 @@ class Laziness<T> implements Iterable<T> {
   /**
    * See {@link tee}
    */
-  tee(n: number = 2): Array<Generator<T, void, void>> {
-    return tee(this._iter, n);
+  tee(n: number = 2): Array<Laziness<T>> {
+    return tee(this._iter, n).map(iter => new Laziness(iter));
   }
 
   /**
