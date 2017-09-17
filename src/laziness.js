@@ -3,6 +3,7 @@
 const filter = require('./filter');
 const forEach = require('./for-each');
 const map = require('./map');
+const map2 = require('./map2');
 const slice = require('./slice');
 const tail = require('./tail');
 const tee = require('./tee');
@@ -10,14 +11,23 @@ const tee = require('./tee');
 /**
  * Convenient wrapper for chaining calls to library functions.
  *
- * You can also use it as iterable
+ * You can also use it as iterable.
  * @example
  * Array.from(new Laziness([1, 2, 3])) // 1, 2, 3
+ * @example
+ * function* fib() {
+ *   yield 1;
+ *   yield 1;
+ *   const [fib1, fib2] = Laziness.from(fib()).tee();
+ *   yield* fib1.map2((x, y) => x + y, fib2.tail());
+ * }
+ * fib() // 1, 1, 2, 3, 5, 8, 13, 21, 34, ...
  */
 class Laziness<T> implements Iterable<T> {
   /**
+   * Same as `new Laziness(iter)`
    */
-  static from(iter: Iterable<T>) {
+  static from<T>(iter: Iterable<T>): Laziness<T> { // eslint-disable-line no-shadow
     return new Laziness(iter);
   }
 
@@ -46,6 +56,13 @@ class Laziness<T> implements Iterable<T> {
    */
   map<U>(callback: (T) => U): Laziness<U> {
     return new Laziness(map(this._iter, callback));
+  }
+
+  /**
+   * See {@link map2}
+   */
+  map2<U, V>(callback: (T) => U, iter2: Iterable<V>): Laziness<U> {
+    return new Laziness(map2(callback, this._iter, iter2));
   }
 
   /**

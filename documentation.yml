@@ -9,6 +9,7 @@ toc:
   - filter
   - forEach
   - map
+  - map2
   - slice
   - tail
   - tee
