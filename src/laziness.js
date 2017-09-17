@@ -4,6 +4,7 @@ const filter = require('./filter');
 const forEach = require('./for-each');
 const map = require('./map');
 const slice = require('./slice');
+const tail = require('./tail');
 const tee = require('./tee');
 
 /**
@@ -52,6 +53,13 @@ class Laziness<T> implements Iterable<T> {
    */
   slice(begin: number, end?: number): Laziness<T> {
     return new Laziness(slice(this._iter, begin, end));
+  }
+
+  /**
+   * See {@link tail}
+   */
+  tail(): Laziness<T> {
+    return new Laziness(tail(this._iter));
   }
 
   /**

@@ -40,6 +40,7 @@ Laziness.from(range(0, 10))
 -   [forEach](#foreach)
 -   [map](#map)
 -   [slice](#slice)
+-   [tail](#tail)
 -   [tee](#tee)
 -   [LAZINESS WRAPPER](#laziness-wrapper)
 -   [Laziness](#laziness)
@@ -47,6 +48,7 @@ Laziness.from(range(0, 10))
     -   [forEach](#foreach-1)
     -   [map](#map-1)
     -   [slice](#slice-1)
+    -   [tail](#tail-1)
     -   [tee](#tee-1)
     -   [toArray](#toarray)
     -   [from](#from)
@@ -160,6 +162,16 @@ Analogical to [Array.prototype.slice](https://developer.mozilla.org/en-US/docs/W
 
 Returns **Generator&lt;T, void, void>** 
 
+## tail
+
+Skips first element of iterable
+
+**Parameters**
+
+-   `iter` **Iterable&lt;T>** 
+
+Returns **Generator&lt;T, void, void>** 
+
 ## tee
 
 Clone interable into n independent instances
@@ -228,6 +240,12 @@ See [slice](#slice)
 
 -   `begin` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 -   `end` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+
+Returns **[Laziness](#laziness)&lt;T>** 
+
+### tail
+
+See [tail](#tail)
 
 Returns **[Laziness](#laziness)&lt;T>** 
 
